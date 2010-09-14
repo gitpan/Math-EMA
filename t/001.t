@@ -6,8 +6,9 @@ BEGIN { use_ok('Math::EMA') };
 my $avg=Math::EMA->new;
 
 ok $avg, 'object created';
-cmp_ok $avg->set_param(60, 0.01), '==', 0.9261187281287934995, 'set_param';
-cmp_ok $avg->alpha, '==', 0.9261187281287934995, 'retrieve alpha';
+cmp_ok sprintf('%.10f', $avg->set_param(60, 0.01) ), '==', 0.9261187281,
+       'set_param';
+cmp_ok sprintf('%.10f', $avg->alpha ), '==', 0.9261187281, 'retrieve alpha';
 
 cmp_ok $avg->add(12), '==', 12, 'added the 1st value';
 cmp_ok $avg->ema, '==', 12, 'ema after the 1st value';

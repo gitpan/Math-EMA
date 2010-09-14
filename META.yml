@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Math-EMA
-version:            0.02
+version:            0.03
 abstract:           compute the exponential moving average
 author:
     - Torsten Foertsch <torsten.foertsch@gmx.net>
